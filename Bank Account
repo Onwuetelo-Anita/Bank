@@ -1,0 +1,50 @@
+class Bank_Account:
+    def __init__(self, account_name):
+        self.account_name = account_name
+        self.balance = 0.0
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f'{amount} deposited successfully.')
+    def withdrawal (self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print (f'{amount} withdrawn successfully')
+        else:
+            print('insufficient funds')
+
+    def display_balance(self):
+        print(f'Account Name : {self.account_name}')
+        print(f'Current Balance : {self.balance}')
+
+print('Test case 1')
+account1 = Bank_Account ('Daniel')
+account1.deposit(500)
+account1.withdrawal(200)
+account1.display_balance()
+
+print('\n')
+
+print('Test case  2')
+account2 = Bank_Account ('Chioma')
+account2.deposit(1500)
+account2.withdrawal(2000)
+account2.display_balance()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
